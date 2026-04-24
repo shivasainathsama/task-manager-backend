@@ -1,66 +1,131 @@
-# Task Manager Backend API
+# 🚀 Task Manager Backend API
 
-A scalable RESTful backend built using Node.js and Express, featuring secure user authentication and structured architecture.
-
----
-
-## 🚀 Features
-
-- User Registration & Login
-- JWT-based Authentication
-- Password Hashing using bcrypt
-- Protected Routes with Middleware
-- Clean MVC Architecture
+A production-ready backend API for managing tasks with authentication and authorization.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Tech Stack
 
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JSON Web Token (JWT)
-- bcryptjs
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* JWT Authentication
+* bcrypt (Password Hashing)
 
 ---
 
-## 📂 Project Structure
+## ✨ Features
 
+* 🔐 User Registration & Login
+* 🔑 JWT-based Authentication
+* 🛡️ Protected Routes (Middleware)
+* 📦 RESTful API Design
+* ⚡ Scalable MVC Architecture
+* 🌍 Environment-based Configuration
+
+---
+
+## 📁 Project Structure
+
+```
 src/
-├── config/         # Database configuration  
-├── controllers/    # Business logic  
-├── models/         # Mongoose schemas  
-├── routes/         # API routes  
-├── middlewares/    # Auth middleware  
-├── utils/          # Helper functions  
-└── app.js          # Express app setup  
+ ├── config/        # DB connection
+ ├── controllers/   # Business logic
+ ├── middlewares/   # Auth middleware
+ ├── models/        # Mongoose schemas
+ ├── routes/        # API routes
+ ├── utils/         # Helper functions
+ └── app.js         # App setup
+
+server.js           # Entry point
+```
 
 ---
 
-## 🔐 Authentication Flow
+## 🔧 Installation
 
-1. User registers → password is hashed
-2. User logs in → JWT token is generated
-3. Token is sent in headers for protected routes
-4. Middleware verifies token and grants access
+```bash
+git clone https://github.com/YOUR_USERNAME/task-manager-backend.git
+cd task-manager-backend
+npm install
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create `.env` file:
+
+```
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+PORT=5000
+```
+
+---
+
+## ▶️ Run the Server
+
+```bash
+npm run dev
+```
 
 ---
 
 ## 📡 API Endpoints
 
 ### Auth
-- POST /api/auth/register
-- POST /api/auth/login
 
-### Protected
-- GET /api/test/profile
+| Method | Endpoint           | Description   |
+| ------ | ------------------ | ------------- |
+| POST   | /api/auth/register | Register user |
+| POST   | /api/auth/login    | Login user    |
 
 ---
 
-## ⚙️ Setup Instructions
+### Protected
 
-1. Clone the repo
-2. Install dependencies:
-   ```bash
-   npm install
+| Method | Endpoint          | Description      |
+| ------ | ----------------- | ---------------- |
+| GET    | /api/test/profile | Get user profile |
+
+---
+
+## 🔐 Authentication
+
+Pass token in headers:
+
+```
+Authorization: Bearer <your_token>
+```
+
+---
+
+## 🧪 Testing
+
+Use:
+
+* Thunder Client
+* Postman
+
+---
+
+## 🚀 Future Improvements
+
+* Task CRUD APIs
+* Role-based access control
+* Pagination & filtering
+* Rate limiting
+* Docker support
+
+---
+
+## 👨‍💻 Author
+
+Shiva Sainath Sama
+
+---
+
+## ⭐ If you like this project
+
+Give it a star on GitHub!
